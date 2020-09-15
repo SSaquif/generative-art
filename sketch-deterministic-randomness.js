@@ -1,7 +1,6 @@
 const canvasSketch = require("canvas-sketch");
 const { lerp } = require("canvas-sketch-util/math");
 const random = require("canvas-sketch-util/random");
-const palettes = require("nice-color-palettes");
 
 const settings = {
   dimensions: [2048, 2048],
@@ -9,7 +8,7 @@ const settings = {
 
 const createGrid = () => {
   const points = [];
-  const count = 150;
+  const count = 50;
   for (let x = 0; x < count; x++) {
     for (let y = 0; y < count; y++) {
       // Switching to a [u,v] co-ordiante system
@@ -22,14 +21,15 @@ const createGrid = () => {
 };
 
 const sketch = () => {
-  const margin = 125;
+  const margin = 300;
+  random.setSeed("drawing-1");
   const filteredPoints = createGrid().filter(([u, v]) => {
-    return Math.random() > 0.98;
+    return random.value() > 0.45;
   });
   console.log(filteredPoints);
 
   return ({ context, width, height }) => {
-    context.fillStyle = "#170b36";
+    context.fillStyle = "pink";
     context.fillRect(0, 0, width, height);
 
     filteredPoints.forEach(([u, v]) => {
@@ -38,10 +38,10 @@ const sketch = () => {
       const y = lerp(margin, height - margin, v);
 
       context.beginPath();
-      context.arc(x, y, 0.062, 0, 2 * Math.PI, false);
-      context.strokeStyle = "white";
-      context.lineWidth = 40;
-      context.stroke();
+      context.arc(x, y, 5, 0, 2 * Math.PI, false);
+      context.fillStyle = "white";
+      context.lineWidth = 20;
+      context.fill();
     });
   };
 };
