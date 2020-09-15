@@ -16,7 +16,12 @@
 4. Generally Factor goes from 0 to 1 both Horizontally and Vertically
 5. 0.5 is center. If u is 0.5, then we are in the middle of start and end, in x-axis
 
+## Deterministic Random
+
+1. Use random from `canvas-sketch-utils/random` for deterministic random
+2. Use together with seed
+
 ## Links
 
 1. [Cheat Sheet from Matt](https://github.com/mattdesl/workshop-generative-art/blob/master/docs/cheat-sheet.md)
-2. [Useful modules from Matt](https://github.com/mattdesl/workshop-generative-art#other-modules-for-creative-coding)
+2. [Useful Modules from Matt](https://github.com/mattdesl/workshop-generative-art#other-modules-for-creative-coding)
