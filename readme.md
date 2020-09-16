@@ -46,3 +46,7 @@
 2. [Matt Deslauriers](https://www.mattdesl.com/): Check out his Front End Masters course, if you can.
 
 3. [Aaron Penne](https://github.com/aaronpenne/generative_art)
+
+4. [Anders Hoff @inconvergent](https://inconvergent.net/)
+
+5. [Nervous Systems](https://n-e-r-v-o-u-s.com/index.php): Company that makes Generative Puzzles and Housewares etc
